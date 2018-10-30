@@ -19,6 +19,7 @@ int main(void)
 		x = p / o;
 		y = q / o;
 		printf("x的值为%lf\n", x);
+
 		printf("y的值为%lf\n", y);
 	}
 	getchar();

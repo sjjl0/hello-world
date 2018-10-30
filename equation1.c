@@ -17,6 +17,7 @@ int main(void)
 		x = (-b + o) / (2 * a);
 		y = (-b - o) / (2 * a);
 		printf("该方程第一个解为%lf\n", x);
+
 		printf("该方程第二个解为%lf\n", y);
 	}
 	getchar();
