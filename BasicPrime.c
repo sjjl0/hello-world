@@ -1,5 +1,25 @@
-//ç´ æ•°æ˜¯åªæœ‰1å’Œæœ¬èº«æ˜¯å› å­çš„æ•°
-//2018/11/14 æ›´æ–°
-int main() {
-    //to do sth
+#include <stdio.h>
+int main()
+{
+	long long a;
+	long long b=0;
+	scanf("%d",&a);
+	long long i;
+		for(i=2;i<a;i++)
+		{
+        if(a%i==0)
+		{
+        	b++;
+        }
+    }
+
+    if(b==0)
+	{
+        printf("%dÊÇËØÊı¡£\n", a);
+    }
+	else
+	{
+        printf("%d²»ÊÇËØÊı¡£\n", a.);
+    }
+	return 0;
 }
