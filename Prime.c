@@ -1,22 +1,108 @@
-/*满足下列条件的自然数称为超级素数:该数本身,所有数字之和,所有数字之积以及所有数字的平方和都是素数.例如113就是一个超级素数.求[100,9999]之内:(1)超级素数的个数.(2)所有超级素数之和.(3)最大的超级素数.*/
-//2018/11/14 更新
-int sum_bit(int num) {
-  return 0;
-}
-
-int multi_bit(int num) {
-  return 0;
-}
-
-int square_sum_bit(int num) {
-  return 0;
-}
-
-bool isprime(int num) {
-  return false;
-}
-
-int main() {
-  if(isprime(113)&&isprime(sum_bit(113))&&isprime(multi_bit(113))&&isprime(square_sum_bit(113)))
-    //to do sth
-}
+#include <stdio.h> 
+int main()
+{
+	int a;
+	int b,c,d;//b������c���d��� 
+	d=0;
+	int i;
+	for(a=100;a<999;a++)
+	{
+		int o=0;
+		int m = a / 1 % 10;
+		int n = a / 10 % 10;
+		int x = a / 100 % 10;
+		int u=m+n+x;
+		int v=m*n*x;
+		int w=m*m+n*n+x*x;
+		for(i=2;i<a;i++)
+		{
+        if(a%i!=0)
+			o++;
+		else
+			o=0;
+			break;
+		}
+		for(i=2;i<u;i++)
+		{
+        if(u%i!=0)
+			o++;
+		else
+			o=0;
+			break;
+		}
+		for(i=2;i<v;i++)
+		{
+        if(v%i!=0)
+			o++;
+		else
+			o=0;
+			break;
+		}
+		for(i=2;i<w;i++)
+		{
+        if(w%i!=0)
+			o++;
+		else
+			o=0;
+			break;
+		}
+		if(o!=0)
+		{
+        	b++;
+        	c=a;
+        	d=d+a;	
+		}
+	}
+	for(a=1000;a<9999;a++)
+	{
+		int oo=0;
+		int mm = a / 1 % 10;
+		int nn = a / 10 % 10;
+		int xx = a / 100 % 10;
+		int zz= a/ 1000 % 10;
+		int uu=mm+nn+xx+zz;
+		int vv=mm*nn*xx*zz;
+		int ww=mm*+nn*nn+xx*xx+zz*zz;
+		for(i=2;i<a;i++)
+		{
+        if(a%i!=0)
+			oo++;
+		else
+			oo=0;
+			break;
+		}
+		for(i=2;i<uu;i++)
+		{
+        if(uu%i!=0)
+			oo++;
+		else
+			oo=0;
+			break;
+		}
+		for(i=2;i<vv;i++)
+		{
+        if(vv%i!=0)
+			oo++;
+		else
+			oo=0;
+			break;
+		}
+		for(i=2;i<ww;i++)
+		{
+        if(ww%i!=0)
+			oo++;
+		else
+			oo=0;
+			break;
+		}
+		if(oo!=0)
+		{
+        	b++;
+        	c=a;
+        	d=d+a;	
+		}
+	}
+	printf("����Ϊ%d",b);
+	printf("���Ϊ%d",c);
+	printf("��Ϊ%d",d);
+} 
