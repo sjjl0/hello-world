@@ -20,7 +20,6 @@ int main(void)
 		printf("x的值为%lf\n", x);
 		printf("y的值为%lf\n", y);
 	}
-	getchar();
 	return 0; 
 }
 }
