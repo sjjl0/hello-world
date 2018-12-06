@@ -20,6 +20,5 @@ int main(void)
 
 		printf("该方程第二个解为%lf\n", y);
 	}
-	getchar();
 	return 0;
 }
